@@ -52,9 +52,12 @@ for (let i = 0; i < points.length; i++) {
   container.appendChild(el);
 }
 
-// **NY**
 
 
+// we add markers to the map
+for (let i = 0; i < featureGroups.length; i++) {
+  featureGroups[i].addTo(map);
+}
 
 // ------------------------------------------------------------
 // async function to get data from json
@@ -67,6 +70,50 @@ async function fetchData(url) {
     console.error(err);
   }
 }
+// function that opens a popup with text at the marker
+// and transfers latLng coordinates of the opened marker
+// to the centering function
+function markerOpen(id) {
+  for (let i in featureGroups) {
+    const markerId = featureGroups[i].options.title;
+    if (markerId === id) {
+      featureGroups[i].openPopup();
+      centerMarker(featureGroups[i].getLatLng());
+    }
+  }
+}
+
+// function centering the map on the marker
+function centerMarker(latlng) {
+  const marker = L.marker([latlng.lat, latlng.lng]);
+  let group = new L.featureGroup([marker]);
+  map.fitBounds(group.getBounds());
+}
+
+// all marker-click classes from html
+document.addEventListener("DOMContentLoaded", () => {
+  const markersDiv = document.querySelectorAll(".marker-click");
+
+  markersDiv.forEach((marker) => {
+    marker.addEventListener("click", () => {
+      // the click event transfers to the function
+      // id = title of the marker
+      markerOpen(marker.id);
+    });
+
+
+
+
+
+// **NY**
+
+
+
+
+
+
+
+
 
 // --------------------------------------------------
 // button to close sidebar
