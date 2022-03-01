@@ -15,6 +15,16 @@ const zoom = 12;
 const lat = 56.22977;
 const lng = 9.01178;
 
+
+//NY**
+const points = [
+  [52.228785157729114, 21.006867885589603, "A", "point 1"],
+  [52.22923201880194, 21.00897073745728, "B", "point 2"],
+  [52.22963944703663, 21.01091265678406, "C", "point 3"],
+  [52.229928587386496, 21.01218938827515, "D", "point 4"],
+//NY**
+  
+  
 // calling map
 const map = L.map("map", config).setView([lat, lng], zoom);
 
