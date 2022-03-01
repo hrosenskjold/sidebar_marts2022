@@ -25,6 +25,27 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
+// **NY**
+//we create an array of markers
+// each marker has a unique title
+// of course this could be another parameter
+const container = document.querySelector(".container");
+const featureGroups = [];
+for (let i = 0; i < points.length; i++) {
+  const [lat, lng, title] = points[i];
+  featureGroups.push(L.marker([lat, lng], { title: title }).bindPopup(title));
+  const el = document.createElement("a");
+  el.id = title;
+  el.className = "marker-click";
+  el.href = "#";
+  el.textContent = `Marker ${title}`;
+  container.appendChild(el);
+}
+
+// **NY**
+
+
+
 // ------------------------------------------------------------
 // async function to get data from json
 async function fetchData(url) {
