@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "coords": [52.16519414289519, 21.09050645507254],
+    "coords": [56.16519414289519, 9.09050645507254],
     "title": "Museum of King Jan III’s Palace at Wilanów - <span>2,5h</span>",
     "small": "ul. St. Kostki Potockiego 10/16",
     "img": {
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "coords": [52.214796786209064, 21.035811398870088],
+    "coords": [56.214796786209064, 9.035811398870088],
     "title": "Royal Łazienki Museum - <span>2h</span>",
     "small": "ul. Agrykoli 1",
     "img": {
@@ -23,7 +23,7 @@
   },
   {
     "id": 3,
-    "coords": [52.232735988033596, 21.019698924307356],
+    "coords": [56.232735988033596, 9.019698924307356],
     "title": "Royal Route - <span>1,5h</span>",
     "img": {
       "src": "http://warsawtour.pl/wp-content/uploads/2018/07/Krakowskie-Przedmie%C5%9Bcie_fot.-Zbigniew-Pan%C3%B3w_pzstudio.pl_.jpg",
@@ -33,7 +33,7 @@
   },
   {
     "id": 4,
-    "coords": [52.247876619002355, 21.014642900093534],
+    "coords": [56.247876619002355, 9.014642900093534],
     "title": "Old Town and Royal Castle - <span>3h</span>",
     "img": {
       "src": "http://warsawtour.pl/wp-content/uploads/2018/07/Rynek-Starego-Miasta_fot.-m.st_.-Warszawa.jpg",
